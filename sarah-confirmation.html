@@ -1,0 +1,72 @@
+<script type="text/javascript">
+    RED.nodes.registerType('sarah-confirmation',{
+        category: 'SARAH',
+        color: '#a6bbcf',
+        defaults: {
+            name: {value:""},
+			texte1: {value:"Ok!", required:true},
+			texte2: {value:"je m'en occupe", required:true},
+			texte3: {value:"Oui Chef", required:true},
+			texte4: {value:"A vos ordres", required:true},
+			texte5: {value:"c'est fait", required:true},
+
+        },
+        inputs:1,
+        outputs:1,
+        icon: "white-globe.png",
+        label: function() {
+            return this.name||"sarah-confirmation";
+			return this.texte1||"sarah-confirmation";
+			return this.texte2||"sarah-confirmation";
+			return this.texte3||"sarah-confirmation";
+			return this.texte4||"sarah-confirmation";
+			return this.texte5||"sarah-confirmation";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="sarah-confirmation">
+	<div class="form-row">
+		<label for="node-input-name"><i class="icon-tag"></i> Name</label>
+		<input type="text" id="node-input-name" placeholder="Name">
+	</div>
+    <div class="form-row">
+        <label for="node-input-texte1"><i class="icon-bookmark"></i> Texte 1</label>
+        <input type="text" id="node-input-texte1" placeholder="Ok!">
+    </div>
+    <div class="form-row">
+        <label for="node-input-texte2"><i class="icon-bookmark"></i> Texte 2</label>
+        <input type="text" id="node-input-texte2" placeholder="je m'en occupe">
+    </div>
+    <div class="form-row">
+        <label for="node-input-texte3"><i class="icon-bookmark"></i> Texte 3</label>
+        <input type="text" id="node-input-texte3" placeholder="Oui Chef">
+    </div>
+    <div class="form-row">
+        <label for="node-input-texte4"><i class="icon-bookmark"></i> Texte 4</label>
+        <input type="text" id="node-input-texte4" placeholder="A vos ordres">
+    </div>	
+    <div class="form-row">
+        <label for="node-input-texte5"><i class="icon-bookmark"></i> Texte 5</label>
+        <input type="text" id="node-input-texte5" placeholder="c'est fait">
+    </div>
+
+</script>
+
+<script type="text/x-red" data-help-name="sarah-confirmation">
+	<h3>Inputs</h3>
+	<p>- <code>msg.payload</code></p>
+	<p></p>
+	<h3>Outputs</h3>
+	<p>- <code>msg.payload</code>: renvoyé par win-sarah</p>
+	<p>- <code>msg.speak</code>: texte à lire par win-speak(ou autre)</p>
+	<p></p>
+	<h3>Détails</h3>
+    <p>module à associer aux modules SARAH</p>
+	<p>		- <b>win-sarah</b></p>
+	<p>		- <b>win-speak</b></p>
+	<p></p>
+	<p>module à placer avec un <b>win-speak</b> avant les modules effectuant une action</p>
+	<p></p>
+	<p>permet de renvoyer un texte aléatoire pour confirmer que sarah va éffectuer un action</p>
+</script>
