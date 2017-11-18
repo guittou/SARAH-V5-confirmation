@@ -30,14 +30,3 @@ permet de renvoyer un texte aléatoire pour confirmer que sarah va éffectuer un
 
 ![GitHub Logo](/images/speak1.png)
 
-### Détails
-
-module à associer aux modules SARAH
-
-- **win-sarah**
-
-- **win-speak**
-
-module à placer avec un **win-speak** avant les modules effectuant une action
-
-permet de renvoyer un texte aléatoire pour confirmer que sarah va éffectuer un action
