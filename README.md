@@ -7,7 +7,7 @@ telecharger, extraire puis copier le repertoire **sarah-confirmation** dans le d
 
 relancer sarah
 
-configuration du module :
+### configuration du module :
 
 ![GitHub Logo](/images/confirm1.png)
 
